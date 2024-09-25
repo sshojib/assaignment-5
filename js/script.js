@@ -6,6 +6,10 @@
 
 
 
+
+
+
+
 // blog-button
 document.getElementById('startBtn').addEventListener('click', function() {
     document.getElementById('quizContainer').classList.remove('hidden');
@@ -30,6 +34,15 @@ function loadQuestions() {
         questionsContainer.appendChild(questionP);
     });
 }
+
+
+// //
+const button = document.getElementById('backBtn');
+button.addEventListener('click', function(){
+    backBtn.classList.add('rounded-xl', 'px-12', 'py-4');
+
+    document.getElementById('quizContainer').classList.add('hidden');
+})
 // hidden-part
 document.getElementById('history-tab').addEventListener('click', function() {
     document.getElementById('historyList').classList.remove('hidden');
@@ -151,6 +164,8 @@ document.getElementById('history-tab').addEventListener('click', function() {
     const historyList = document.getElementById('historyList');
     historyList.classList.toggle(''); 
 });
+
+
 
 
 

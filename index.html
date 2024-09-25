@@ -10,26 +10,32 @@
 </head>
 <body class="bg-[#F9F7F3]">
     <header>
-    <nav class="flex justify-between py-9 px-32 text-center">
-        <button id="startBtn" class="px-8 py-3 bg-[#B4F461] rounded-xl font-bold">Blog</button>
-
-    <div id="quizContainer" class="hidden mt-8 bg-white p-6  shadow-lg fixed w-[500px]">
-        <h2 class="text-xl font-bold mb-4 text-left">Important Questions</h2>
-        <div id="questions" class="font-semibold"></div>
-        <button id="submitBtn" class="mt-4 px-4 py-2 bg-green-500 text-white rounded-xl text-left">Done</button>
-    </div>
-
-
-        <div class="flex">
-        <img class="size-10" src="assets/logo.png" alt="">
-        <h1 class="text-xl font-bold">Donate Bangladesh</h1>
-    </div>
-        <div class="flex">
-            <img class="size-7" src="assets/coin.png" alt="">
-            <h3 class="text-[#4e4e4e] px-2"><span id="current-amount" >5500</span>BDT</h3>
+        <div>
+        <nav id="navbar" class="flex justify-between py-9 px-32 text-center  sticky bg-[#F9F7F3] z-10 shadow-md">
+            <button id="startBtn" class="px-8 py-3 bg-[#B4F461] rounded-xl font-bold">Blog</button>
+    
+        <div id="quizContainer" class="hidden mt-8 bg-white p-6  shadow-lg fixed w-[500px]">
+            
+            <h2 class="text-xl font-bold mb-4 text-left">Important Questions</h2>
+            <div id="questions" class="font-semibold"></div>
+            <div class="text-left">
+            <button id="submitBtn" class="mt-4 px-4 py-2 bg-green-500 rounded-xl">Done</button>
+            <button id="backBtn" class="bg-[#B4F461] px-4 py-2 rounded-xl">Back</button>
         </div>
-        
-    </nav>
+    </div>
+    
+    
+            <div class="flex">
+            <img class="size-10" src="assets/logo.png" alt="">
+            <h1 class="text-xl font-bold">Donate Bangladesh</h1>
+        </div>
+            <div class="flex">
+                <img class="size-7" src="assets/coin.png" alt="">
+                <h3 class="text-[#4e4e4e] px-2"><span id="current-amount" >5500</span>BDT</h3>
+            </div>
+            
+        </nav>
+    </div>
 </header>
     <main class="bg-white mb-32">
         <div>
