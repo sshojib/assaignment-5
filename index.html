@@ -10,38 +10,68 @@
 </head>
 <body class="bg-[#F9F7F3]">
     <header>
-    <nav class="flex justify-between py-9 px-32 text-center backdrop-blur">
-        <button class="font-bold py-3 px-8 bg-[#B4F461] rounded-xl">Blog</button>
+    <nav class="flex justify-between py-9 px-32 text-center">
+        <button id="startBtn" class="px-8 py-3 bg-[#B4F461] rounded-xl font-bold">Blog</button>
+
+    <div id="quizContainer" class="hidden mt-8 bg-white p-6  shadow-lg fixed w-[500px]">
+        <h2 class="text-xl font-bold mb-4 text-left">Important Questions</h2>
+        <div id="questions" class="font-semibold"></div>
+        <button id="submitBtn" class="mt-4 px-4 py-2 bg-green-500 text-white rounded-xl text-left">Done</button>
+    </div>
+
+
         <div class="flex">
         <img class="size-10" src="assets/logo.png" alt="">
         <h1 class="text-xl font-bold">Donate Bangladesh</h1>
     </div>
         <div class="flex">
             <img class="size-7" src="assets/coin.png" alt="">
-            <h3 id="current-amount" class="text-[#4e4e4e] px-2">5500 BDT</h3>
+            <h3 class="text-[#4e4e4e] px-2"><span id="current-amount" >5500</span>BDT</h3>
         </div>
         
     </nav>
 </header>
     <main class="bg-white mb-32">
-        <div class="text-center">
-        <button id="donation-tab" class="border-2 border-[#afafaf] px-9 py-3 mt-20 rounded-xl focus:outline-none transition-color bg-[#B4F461]"><a href=""></a>Donation</button>
-        <button id="history-tab" class="border-2 border-[#afafaf] px-9 py-3 mt-20 rounded-xl focus:outline-none transition-color"><a href="">History</a></button>
-        </div>
+        <div>
+            <div class="text-center">
+                <button id="donation-tab" class="px-8 py-3 mt-12 border-2 bg-[#B4F461] rounded-xl">Donation</button>
+                <button id="history-tab" class="px-8 py-3 border-2 mt-12 rounded-xl">History</button>
+            </div>
+        
+                <ul id="historyList" class="list-none pl-9 mt-4 hidden">
+                    <li class="bg-white rounded-lg shadow-lg p-5 mx-auto mt-4 w-[900px] font-semibold">
+                        10 Taka is donated for Donate for Flood at Noakhali, Bangladesh
+                        <p class="text-[#4e4e4e]">Date: Wed Sep 25 2024 3:48 GMT + 0600</p>
+                    </li>
+                    <li class="bg-white rounded-lg shadow-lg p-5 mx-auto mt-4 w-[900px] font-semibold">
+                        20 Taka is donated for Donate for Flood at Noakhali, Bangladesh
+                        <p class="text-[#4e4e4e]">Date: Thu Sep 26 2024 1:30 GMT + 0600</p>
+                    </li>
+                    <li class="bg-white rounded-lg shadow-lg p-5 mx-auto mt-4 w-[900px] font-semibold">
+                        30 Taka is donated for Donate for Flood at Noakhali, Bangladesh
+                        <p class="text-[#4e4e4e]">Date: Fri Sep 27 2024 2:15 GMT + 0600</p>
+                    </li>
+                    <li class="bg-white rounded-lg shadow-lg p-5 mx-auto mt-4 w-[900px] font-semibold">
+                        40 Taka is donated for Donate for Flood at Noakhali, Bangladesh
+                        <p class="text-[#4e4e4e]">Date: Sat Sep 28 2024 9:00 GMT + 0600</p>
+                    </li>
+                </ul>
+            
+</div>
            
 
-
+<div id="donate-bangladesh">
             <div>
                 <div class="flex justify-center gap-4 mt-8">
                     <div>
                         <img src="assets/noakhali.png" alt="">
                     </div>
                     <div>
-                        <button id="add-amount"><img class="inline" src="assets/coin.png" alt="">10 BDT</button>
+                        <button><img class="inline" src="assets/coin.png" alt=""><span id="add-amount">0</span>BDT</button>
                         <h1 class="mt-6 font-bold text-xl">Donate for Flood at Noakhali, Bangladesh</h1>
                         <p class="text-[#4e4e4e] mt-6"> The recent floods in Noakhali have caused significant damage to <br>homes  infrastructure. Your donation will help provide essential <br>supplies and  to those affected by this disaster. Every contribution, <br>big or small, makes  difference. Please join us in supporting the relief <br>efforts and making a positive impact on the lives of those in need.</p>
                         <form action="">
-                            <input id="input-add-amount" class="mt-6 w-[500px] p-4 rounded-xl border-2" type=" text" placeholder="Write Donation Amount">
+                            <input id="input-add-amount" class="mt-6 w-[500px] p-4 rounded-xl border-2" type=" number" placeholder="Write Donation Amount">
                         </form>
                         <button id="donate-now" class="bg-[#B4F461] w-[500px] mt-6 p-4 text-xl rounded-xl">Donate Now</button>
                     </div>
@@ -56,11 +86,11 @@
                         <img src="assets/feni.png" alt="">
                     </div>
                     <div>
-                        <button id="balance-add"><img class="inline" src="assets/coin.png" alt="">600 BDT</button>
+                        <button><img class="inline" src="assets/coin.png" alt=""><span id="balance-add">0</span>BDT</button>
                         <h1 class="mt-6 font-bold text-xl">Donate for Flood Relief in Feni,Bangladesh</h1>
                         <p class="text-[#4e4e4e] mt-6">The recent floods in Feni have devastated local communities, leading <br>to severe disruption and loss. Your generous donation will help <br>provide immediate aid, including food, clean water, and medical <br>supplies, to those affected by this calamity. Together, we can offer <br>crucial support and help rebuild lives in the aftermath of this disaster. <br>Every contribution counts towards making a real difference. Please <br>consider donating today to assist those in urgent need.</p>
                         <form action="">
-                            <input id="input-amount-add" class="mt-6 w-[500px] p-4 rounded-xl border-2" type="text" placeholder="Write Donation Amount">
+                            <input id="input-amount-add" class="mt-6 w-[500px] p-4 rounded-xl border-2" type=" number" placeholder="Write Donation Amount">
                         </form>
                         <button id="button-donate-now" class="bg-[#B4F461] w-[500px] mt-6 p-4 text-xl rounded-xl">Donate Now</button>
                     </div>
@@ -74,16 +104,17 @@
                         <img src="assets/quota-protest.png" alt="">
                     </div>
                     <div>
-                        <button id="balance" ><img class="inline" src="assets/coin.png" alt="">2400 BDT</button>
+                        <button><img class="inline" src="assets/coin.png" alt=""><span id="balance">0</span>BDT</button>
                         <h1 class="mt-6 text-xl font-bold">Aid for Injured in the Quota Movement</h1>
                         <p class="mt-6 text-[#4e4e4e]">The recent Quota movement has resulted in numerous injuries and <br>significant hardship for many individuals. Your support is crucial in <br>providing medical assistance, rehabilitation, and necessary supplies <br>to those affected. By contributing, you help ensure that injured <br>individuals receive the care and support they need during this <br>challenging time. Every donation plays a vital role in alleviating their <br>suffering and aiding in their recovery. Please consider making a <br>donation to support these brave individuals in their time of need.</p>
                         <form action="">
-                            <input id="input-amount" class="mt-6 w-[500px] p-4 rounded-xl border-2" type="text" placeholder="Write Donation Amount">
+                            <input id="input-amount" class="mt-6 w-[500px] p-4 rounded-xl border-2" type=" number" placeholder="Write Donation Amount">
                         </form>
                         <button id="btn-donate-now" class="mt-6 w-[500px] p-4 bg-[#B4F461] rounded-xl text-xl mb-32">Donate Now</button>
                     </div>
                 </div>
             </div>
+        </div>
 </main>
 <script src="js/script.js"></script>
 </body>
