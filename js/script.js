@@ -1,15 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
-
 // blog-button
 document.getElementById('startBtn').addEventListener('click', function() {
     document.getElementById('quizContainer').classList.remove('hidden');
@@ -102,6 +91,10 @@ event.preventDefault();
         alert("Please enter a valid donation amount.");
     }
 });
+document.getElementById('btn-donate-now').addEventListener('click', function() {
+    document.getElementById('congratulationsCard').classList.toggle('hidden');
+});
+
 // 2
 const butnDonateNow = document.getElementById('button-donate-now') 
 butnDonateNow.addEventListener('click', function(event) {
